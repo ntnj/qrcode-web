@@ -1,15 +1,11 @@
 import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import { windi } from "svelte-windicss-preprocess"
+import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default defineConfig({
   build: {
     minify: false,
   },
   plugins: [svelte({
-    preprocess: [windi({})],
-    experimental: {
-      useVitePreprocess: true,
-    }
+    preprocess: [vitePreprocess()],
   })],
 })
