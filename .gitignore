@@ -1,4 +1,6 @@
 node_modules
 .devcontainer
 package-lock.json
+pnpm-lock.yaml
+.pnpm-store
 dist
